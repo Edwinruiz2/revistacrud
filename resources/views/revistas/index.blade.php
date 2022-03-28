@@ -11,7 +11,7 @@
 <body>
 <h2>Listado de revista</h2>
 
-<table class="table table-success table-striped">
+<table class="table table-info table-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -40,7 +40,7 @@
             <form action="{{url('/revista/'.$revista->id) }}" method="POST">
                 @csrf
                 {{method_field('DELETE')}}
-                <input type="submit" value="Eliminar"
+                <input type="submit" class="btn btn-danger" value="Eliminar"
                 onclick="return confirm('Desea eliminar el registro?')"
                 >
             </form>
@@ -51,7 +51,8 @@
 
 </table>
 
-<a href="{{url('/revista/create')}}">Nuevo Registro de Revista</a>
+<button type="button" class="btn btn-dark"><a href="{{url('/revista/create')}}">Nuevo Registro de Revista</a>
+  </button>
   
 </body>
 </html>
